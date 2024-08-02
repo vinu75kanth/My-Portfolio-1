@@ -34,7 +34,7 @@ function App() {
     document.getElementById(id).classList.add("tabSkillDisplay");
   }
   return (<>
-    <div id="Home" className="bg-firstImage h-screen w-full bg-cover bg-center">
+    <div id="Home">
       <div className="p-6">
         <nav className="flex items-center justify-between flex-wrap">
           <p className="text-3xl bold"><span className='spann'>V</span>inu <span className='spann'>K</span>anth</p>
