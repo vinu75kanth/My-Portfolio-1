@@ -121,10 +121,10 @@ function App() {
     <div id="Portflolio" className='ml-pad mt-10'>
       <h1 className='text-6xl pl-8 pt-8 font-bold'>My Work</h1>
       <div className='works mt-10 mr-10'>
-        <Work source="src/assets/work-1.png" heading="Online-Text-Editor" 
+        <Work source="./src/assets/work-1.png" heading="Online-Text-Editor" 
               content="Made an interactive Text Editor for HTML, CSS, JavaScript" link="https://vinu75kanth.github.io/Code-Pen/"/>
-        <Work source="src/assets/work-2.png" heading="" content="" link=""/>
-        <Work source="src/assets/work-3.png"/>
+        <Work source="./src/assets/work-2.png" heading="" content="" link=""/>
+        <Work source="./src/assets/work-3.png"/>
       </div>
       <div id="work" className='text-center pt-16 text-4xl text-proj hidden'>
         Nothing More.
