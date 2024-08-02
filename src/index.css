@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    color : white
+}
+html{
+    scroll-behavior: smooth;
+}
+@layer components{
+    .navEle{
+        @apply inline-block list-none p-3 relative;
+    }
+    .aboutP{
+        @apply pr-12 text-xl relative;
+        cursor: pointer;
+    }
+    .card{
+        @apply bg-back p-10 m-3 rounded-lg;
+        transition: background-color 0.5s,transform 0.5s;
+    }
+    .work1{
+        width:370px;
+        height:460px;
+        position: relative;
+        transition: background 0.5s;
+    }
+    .work2{
+        left:0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6),hsla(341, 96%, 46%, 0.745));
+        transition: height 0.5s;
+        border-radius: 10px;
+    }
+}
+.navEle a{
+    position: relative;
+}
+.works{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px,1fr));
+    grid-template-rows: repeat(3,auto);
+}
+.navEle a::after{
+    width: 0;
+    height:3px;
+    content: '';
+    background: hsla(341, 96%, 46%, 0.745);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navEle a:hover::after{
+    width: 100%;
+}
+.aboutP{
+    position: relative;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-rows: repeat(3,auto);
+}
+.aboutP::after{
+    content: '';
+    background: hsla(341, 96%, 46%, 0.745);
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+}
+.aboutP:hover::after{
+    width: 50%;
+}
+.activeTab::after{
+    content: '';
+    background: hsla(341, 96%, 46%, 0.745);
+    width: 50%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+}
+.tabSkillDisplay{
+    display: block;
+}
+.hello{
+    color : hsla(0, 0%, 80%, 0.205);
+}
+.card:hover{
+    background-color: hsla(341, 96%, 46%, 0.745);
+    transform: translateY(-10px);
+}
+.work1:hover .work2{
+    height: 100%;
+}
+.work1 img{
+    width: 100%;
+    transition: transform 0.5s;
+}
+.work1:hover img{
+    transform: scale(1.05);
+}
+.btn{
+    border: 2px solid hsla(341, 96%, 46%, 0.745);
+    @apply p-4;
+    font-weight: bold;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background-color: hsla(341, 96%, 46%, 0.745);
+}
+#rightEle{
+    width:100%;
+}
+form input,form textarea{
+    width:100%;
+    border: 0;
+    outline: 1;
+    background: #262626;
+    padding: 15px;
+    margin:12px 0px;
+    font-size:18px;
+    border-radius: 10px;
+}
+#socials a{
+    padding-right: 15px;
+    display: inline-block;
+}
+
+.down{
+    border: 2px solid hsla(341, 96%, 46%, 0.745);
+    @apply p-4;
+    font-weight: bold;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+}
+.down:hover{
+    background-color: hsla(341, 96%, 46%, 0.745);
+}
+.spann{
+    color: hsla(341, 96%, 46%, 0.745);
+    font-weight: bold;
+    font-size: 50px;
+}
+ul li{
+    @apply pt-2;
+}
